@@ -1,12 +1,36 @@
 
-/* 
+.List__container{
+    display: flex;
+    margin: auto;
+   justify-content:center;
+    align-items:center;
+    align-content:flex-start;
+    flex-direction: column;
+   border:solid;
+   width: 300px;
+   height: 500px;
+   background-color: rgb(85, 91, 255);
+   border-radius: 10px;
+   color: yellow;
+   font-family: 'Courier New', Courier, monospace;
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+}
+.List__container button{
+    border-radius: 5px;
+    border:none;
+    background-color: yellow;
+    color:rgb(85, 91, 255);
+    box-shadow: rgb(85, 91, 255) 0px 0px 0px 1px, rgb(31, 193, 27) 0px 0px 0px 2px, rgb(255, 217, 19) 0px 0px 0px 3px, rgb(255, 156, 85) 0px 0px 0px 4px, rgb(255, 85, 85) 0px 0px 0px 5px;
+    margin-left: 5px;
+}
+li{
+    margin-bottom: 20px;
+}
+ul{
+    margin-top: 10px;
+}
+input{
+    border-radius: 5px;
+    background-color: midnightblue;
+    color: yellow;
+}

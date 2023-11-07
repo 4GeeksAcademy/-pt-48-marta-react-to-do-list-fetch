@@ -1,26 +1,44 @@
-import React from "react";
+import React, {useState} from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+let nextId = 0;
 
-//create your first component
 const Home = () => {
+	const [thing, setThing] = useState('');
+	const [pends, setPends] = useState([]);
+  
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+	  <> <div className="List__container">
+		<h1>To do list:</h1>
+		<div className="Input__container">
+		<input
+		  value={thing}
+		  onChange={e => setThing(e.target.value)}
+		/>
+		<button className="button-add" onClick={() => {
+		  setPends([
+			...pends,
+			{ id: nextId++, thing: thing}
+		  ]);
+		}}>Add</button>
 		</div>
+		<ul>
+		  {pends.map(pend => (
+			<li key={pend.id}>{pend.thing}{' '}
+			<button className="button-delete" onClick={() => {
+              setPends(
+                pends.filter(a =>
+                  a.id !== pend.id
+                )
+              );
+            }}>
+              X
+            </button>
+			</li>
+		  ))}
+		</ul>
+		</div>
+	  </>
 	);
-};
+  }
 
 export default Home;
