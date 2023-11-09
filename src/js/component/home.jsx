@@ -10,7 +10,7 @@ const Home = () => {
 	  <> <div className="List__container">
 		<h1>To do list:</h1>
 		<div className="Input__container">
-		<input
+		<input placeholder="Task"
 		  value={thing}
 		  onChange={e => setThing(e.target.value)}
 		/>
@@ -36,6 +36,7 @@ const Home = () => {
 			</li>
 		  ))}
 		</ul>
+		<p> {pends.length} pending tasks</p>
 		</div>
 	  </>
 	);

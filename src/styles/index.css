@@ -1,4 +1,7 @@
-
+body {
+ 
+    background-color: #cccccc;
+   }
 .List__container{
     display: flex;
     margin: auto;
@@ -10,10 +13,11 @@
    width: 300px;
    height: 500px;
    background-color: rgb(85, 91, 255);
+   opacity: 90%;
    border-radius: 10px;
    color: yellow;
    font-family: 'Courier New', Courier, monospace;
-
+   
 }
 .List__container button{
     border-radius: 5px;
