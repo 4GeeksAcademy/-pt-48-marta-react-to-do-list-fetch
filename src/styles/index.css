@@ -1,6 +1,6 @@
 body {
  
-    background-color: #cccccc;
+    background-image: url("https://img.freepik.com/free-vector/coloured-stains-pattern_1053-530.jpg?w=740&t=st=1699726131~exp=1699726731~hmac=72cc99aa7c0302f9a406cadd5ece96639918665e6d556bda84527a973fb3754e");
    }
 .List__container{
     display: flex;
@@ -12,7 +12,7 @@ body {
    border:solid;
    width: 300px;
    height: 500px;
-   background-color: rgb(85, 91, 255);
+   background-color: #F91A81;
    opacity: 90%;
    border-radius: 10px;
    color: yellow;
