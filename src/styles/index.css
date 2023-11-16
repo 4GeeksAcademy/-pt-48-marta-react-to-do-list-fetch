@@ -11,7 +11,7 @@ body {
     flex-direction: column;
    border:solid;
    width: 300px;
-   height: 500px;
+   height: 100vh;
    background-color: #F91A81;
    opacity: 90%;
    border-radius: 10px;
