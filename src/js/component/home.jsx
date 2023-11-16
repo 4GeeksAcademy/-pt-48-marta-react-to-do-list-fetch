@@ -44,10 +44,7 @@ const Home = () => {
 		  onChange={e => setThing(e.target.value)}
 		/>
 		<button className="button-add" onClick={() => {
-		  setPends([
-			...pends,
-			{ id: nextId++, label: thing}
-		  ]);
+		  createNewTodo(thing); setThing("");
 		}}>Add</button>
 		</div>
 		<ul>
