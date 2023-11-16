@@ -2,24 +2,38 @@ import React, {useState, useEffect} from "react";
 
 let nextId = 0;
 
+const SERVER_URL =
+  'https://playground.4geeks.com/apis/fake/todos/user/martaml';
+const GET_HTTP_METHOD = 'GET';
+const PUT_HTTP_METHOD = 'PUT';
+
 const Home = () => {
 	const [thing, setThing] = useState('');
 	const [pends, setPends] = useState([]);
 
-	// const getInfoAPI = async () => {
-	// 	const response = await fetch("https://playground.4geeks.com/apis/fake/todos/user/martaml",{
-	// 		method:'GET'
-	// 	} 
-	// 	);
-	// 	const data = await response.json();
+	const getInfoAPI = async () => {
+		const response = await fetch(SERVER_URL, { method: GET_HTTP_METHOD });
+		const PendsState = await response.json();
+		setPends(PendsState);
+	};
 
-	// 	setPends(data);
-	// }
+	const createNewTodo = async (label) => {
+		const newTodo = { label, id: '', done: false };
+		const state = [...pends, newTodo];
+		await fetch(SERVER_URL, {
+		  method: PUT_HTTP_METHOD,
+		  body: JSON.stringify(state),
+		  headers: {
+			'Content-Type': 'application/json',
+		  },
+		});
+		await getInfoAPI();
+	  };
     
-	// useEffect (() => {
-	// 	getInfoAPI()
+	useEffect (() => {
+		getInfoAPI()
 
-	// }, []);
+	}, []);
 
 	return (
 	  <> <div className="List__container">
