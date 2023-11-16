@@ -23,7 +23,7 @@ const Home = () => {
 
 	return (
 	  <> <div className="List__container">
-		<h1>To do list:</h1>
+		<h3>ArtistAs pendientes:</h3>
 		<div className="Input__container">
 		<input placeholder="Task"
 		  value={thing}
@@ -51,7 +51,7 @@ const Home = () => {
 			</li>
 		  ))}
 		</ul>
-		<p> {pends.length} pending tasks</p>
+		<p> {pends.length} artistAs pendientes por descubrir</p>
 		</div>
 	  </>
 	);

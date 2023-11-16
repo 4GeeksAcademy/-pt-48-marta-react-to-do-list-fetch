@@ -16,7 +16,8 @@ body {
    opacity: 90%;
    border-radius: 10px;
    color: yellow;
-   font-family: 'Courier New', Courier, monospace;
+   font-family: 'Poppins', sans-serif;
+
    
 }
 .List__container button{
@@ -35,6 +36,6 @@ ul{
 }
 input{
     border-radius: 5px;
-    background-color: midnightblue;
+    background-color: #9229FE;
     color: yellow;
 }
