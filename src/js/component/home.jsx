@@ -29,6 +29,19 @@ const Home = () => {
 		});
 		await getInfoAPI();
 	  };
+
+	  const deleteTask = async (label) => {
+		const todoDone = { label, id: '', done: true };
+		const state = [...pends, todoDone];
+		await fetch(SERVER_URL, {
+		  method: PUT_HTTP_METHOD,
+		  body: JSON.stringify(state),
+		  headers: {
+			'Content-Type': 'application/json',
+		  },
+		});
+		await getInfoAPI();
+	  };
     
 	useEffect (() => {
 		getInfoAPI()
